@@ -17,4 +17,3 @@ CSV.foreach(ARGV[0], headers: true, header_converters: :symbol) do |row|
   )
   puts '.'
 end
-
