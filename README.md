@@ -1,10 +1,14 @@
-# Import Stripe plans from CSV
+# Import Stripe plans and coupons from CSV
 
-Reads the Stripe plan export CSV format so can be used to populate the
+Reads the Stripe plan/coupon export CSV format so can be used to populate the
 test environment using an export from the live environment.
 
+Edit the .env file to include your Stripe Private API key.
+
+## Plans
+
 Alternatively can be used to import plans from a CSV with the following
-columns
+columns:
 
 `amount,
 interval,
@@ -12,10 +16,16 @@ name,
 currency,
 id`
 
-Edit the .env file to include your Stripe Private API key.
-
-## To run
+### To run
 ```
 bundle
-bundle exec importer.rb plans.csv
+bundle exec plan-importer.rb plans.csv
+```
+
+## Coupons
+
+### To run
+```
+bundle
+bundle exec coupon-importer.rb coupons.csv
 ```
